@@ -1,43 +1,50 @@
 {
-	"name": "Django Example",
-	"id": "django_example_ynh",
+	"name": "uMap",
+	"id": "umap_ynh",
 	"packaging_format": 1,
 	"description": {
-		"en": "App to demonstrate the integration of a Django project under YunoHost via https://github.com/YunoHost-Apps/django_yunohost_integration"
+		"en": "Free mapping softare",
+		"fr": "Logiciel libre de cartographie"
 	},
-	"version": "0.5.0rc1~ynh1",
-	"url": "https://github.com/YunoHost-Apps/django_example_ynh",
+	"version": "0.1.0",
+	"url": "https://github.com/ruairif/umap_ynh",
     "upstream": {
-        "license": "GPL-3.0",
-        "website": "https://github.com/YunoHost-Apps/django_example_ynh",
-        "admindoc": "https://github.com/YunoHost-Apps/django_example_ynh",
-        "userdoc": "https://github.com/YunoHost-Apps/django_example_ynh",
-        "code": "https://github.com/YunoHost-Apps/django_example_ynh"
+        "license": "AGPLv3",
+        "website": "https://github.com/ruairif/umap_ynh",
+        "admindoc": "https://github.com/ruairif/umap_ynh",
+        "userdoc": "https://github.com/ruairif/umap_ynh",
+        "code": "https://github.com/ruairif/umap_ynh"
     },
-	"license": "GPL-3.0",
-	"maintainer": {
-		"name": "Jens Diemer",
-		"email": "django_example_ynh@jensdiemer.de"
-	},
+	"license": "AGPLv3",
 	"previous_maintainers": [],
 	"requirements": {
 		"yunohost": ">=11"
 	},
 	"multi_instance": true,
 	"services": [
-		"nginx", "postgresql", "redis"
+		"nginx", "postgresql"
 	],
 	"arguments": {
 		"install" : [
 			{
 				"name": "domain",
-				"type": "domain"
+				"type": "domain",
+				"full_domain": true
 			},
 			{
 				"name": "path",
 				"type": "path",
-				"example": "/django_example_ynh",
-				"default": "/django_example_ynh"
+				"example": "/umap",
+				"default": "/umap"
+			},
+			{
+				"name": "language",
+				"choices": ["en_EN", "fr_FR"],
+				"ask": {
+					"en": "Choose the application language",
+					"fr": "Choisissez la langue de l'application"
+				},
+				"default": "en_EN"
 			},
 			{
 				"name": "admin",

@@ -56,9 +56,6 @@ ynh_app_setting_set --app="$app" --key=port --value="$port"
 
 db_pwd=$(ynh_app_setting_get --app="$app" --key=psqlpwd)
 
-redis_db=$(ynh_redis_get_free_db)
-ynh_app_setting_set --app="$app" --key=redis_db --value="$redis_db"
-
 #-------------------------------------------------
 # config_panel.toml settings:
 
@@ -134,7 +131,7 @@ ynh_script_progression --message="Install project via pip..." --weight=45
 	set -o nounset
 	ynh_exec_as $app $final_path/venv/bin/python3 -m ensurepip
 	ynh_exec_as $app $final_path/venv/bin/pip3 install --upgrade wheel pip setuptools
-	ynh_exec_as $app $final_path/venv/bin/pip3 install --no-deps -r "$final_path/requirements.txt"
+	ynh_exec_as $app $final_path/venv/bin/pip3 install --no-deps "$final_path"
 )
 
 #=================================================
@@ -153,6 +150,12 @@ ynh_add_config --template="urls.py" --destination="$final_path/urls.py"
 ynh_add_config --template="wsgi.py" --destination="$final_path/wsgi.py"
 
 touch "$final_path/local_settings.py"
+
+#=================================================
+# Activate PostGIS extension
+#=================================================
+
+ynh_psql_connect_as 'umap' "$db_pwd" <<< "CREATE EXTENSION postgis;"
 
 #=================================================
 # MIGRATE / COLLECTSTATIC / CREATEADMIN

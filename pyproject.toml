@@ -1,20 +1,20 @@
 [tool.poetry]
-name = "django_example_ynh"
-version = "0.5.0rc1+ynh1"
+name = "umap_ynh"
+version = "0.1.0"
 description = "Demo YunoHost Application to demonstrate the integration of a Django project under YunoHost."
 authors = ["JensDiemer <git@jensdiemer.de>"]
 license = "GPL"
-homepage = "https://github.com/YunoHost-Apps/django_example_ynh"
+homepage = "https://github.com/ruairif/umap_ynh"
 
 [tool.poetry.urls]
-"Bug Tracker" = "https://github.com/YunoHost-Apps/django_example_ynh/issues"
+"Bug Tracker" = "https://github.com/ruairif/umap_ynh/issues"
 
 [tool.poetry.dependencies]
 python = ">=3.9,<4.0.0"  # Stay with 3.9 until YunoHost used >=Debian 11 (Bullseye)
 
-django-example = ">=0.1.0rc0"  # https://github.com/jedie/django-example
+umap = ">=1.3.0"  # https://github.com/umap-project/umap
 
-# extras "ynh" will install: gunicorn, psycopg2, django-redis and django-axes
+# extras "ynh" will install: gunicorn, psycopg2, and django-axes
 # see: https://github.com/YunoHost-Apps/django_yunohost_integration/blob/main/pyproject.toml
 django_yunohost_integration = {version = ">=0.5.0rc1", extras = ["ynh"]}  # https://github.com/YunoHost-Apps/django_yunohost_integration
 
