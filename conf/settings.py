@@ -126,6 +126,7 @@ SECRET_KEY = __get_or_create_secret(FINALPATH / 'secret.txt')  # /opt/yunohost/$
 INSTALLED_APPS += [
     'django.contrib.gis',
     'umap',
+    'compressor',
     # See https://github.com/peopledoc/django-agnocomplete/commit/26eda2dfa4a2f8a805ca2ea19a0c504b9d773a1c
     # Django does not find the app config in the default place, so the app is not loaded
     # so the "autodiscover" is not run.
@@ -234,6 +235,7 @@ MEDIA_ROOT = str(PUBLIC_PATH / 'media')
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
 ]
 STATICFILES_DIRS = []  # May be extended when using UMAP_CUSTOM_STATICS
 
@@ -276,6 +278,9 @@ TEMPLATES = [
         }
     },
 ]
+
+COMPRESS_ENABLED = True
+COMPRESS_OFFLINE = True
 
 try:
     from local_settings import *  # noqa:F401,F403
