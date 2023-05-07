@@ -124,7 +124,6 @@ YNH_SETUP_USER = 'setup_user.setup_project_user'
 SECRET_KEY = __get_or_create_secret(FINALPATH / 'secret.txt')  # /opt/yunohost/$app/secret.txt
 
 INSTALLED_APPS += [
-    'axes',  # https://github.com/jazzband/django-axes
     'django_yunohost_integration.apps.YunohostIntegrationConfig',
     'django.contrib.gis',
     'umap',
