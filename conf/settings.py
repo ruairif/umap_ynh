@@ -241,22 +241,6 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 ALLOWED_HOSTS = ['__DOMAIN__']
 
 # _____________________________________________________________________________
-# Configuration for caching
-CACHES = {
-    'default': {
-        'BACKEND': 'django_redis.cache.RedisCache',
-        'LOCATION': 'redis://127.0.0.1:6379/__REDIS_DB__',
-        # If redis is running on same host as PyInventory, you might
-        # want to use unix sockets instead:
-        # 'LOCATION': 'unix:///var/run/redis/redis.sock?db=1',
-        'OPTIONS': {
-            'CLIENT_CLASS': 'django_redis.client.DefaultClient',
-        },
-        'KEY_PREFIX': '__APP__',
-    },
-}
-
-# _____________________________________________________________________________
 # Static files (CSS, JavaScript, Images)
 
 if PATH_URL:
