@@ -25,15 +25,9 @@ deprecated==1.2.13 ; python_version >= "3.9" and python_full_version < "4.0.0" \
 django-axes==5.39.0 ; python_version >= "3.9" and python_full_version < "4.0.0" \
     --hash=sha256:8f039f8e98f050f13f654efca599d8a04d0b57d330c590cf89ec2bf731c9a7fb \
     --hash=sha256:97702552f7939c81db5bba2ef855ae43f20df92fa261cb79fd4c8633ba3b3955
-django-example==0.1.0rc0 ; python_version >= "3.9" and python_full_version < "4.0.0" \
-    --hash=sha256:9bf31725f539d6c3489fd29a743f496fce1080164f5a62b87a6af2be04ca81c0 \
-    --hash=sha256:de4460c2175506dcb528ac4f98df8c436c2d102f8d08c77b766cf406038eef53
 django-ipware==4.0.2 ; python_version >= "3.9" and python_full_version < "4.0.0" \
     --hash=sha256:602a58325a4808bd19197fef2676a0b2da2df40d0ecf21be414b2ff48c72ad05 \
     --hash=sha256:878dbb06a87e25550798e9ef3204ed70a200dd8b15e47dcef848cf08244f04c9
-django-redis==5.2.0 ; python_version >= "3.9" and python_full_version < "4.0.0" \
-    --hash=sha256:1d037dc02b11ad7aa11f655d26dac3fb1af32630f61ef4428860a2e29ff92026 \
-    --hash=sha256:8a99e5582c79f894168f5865c52bd921213253b7fd64d16733ae4591564465de
 django-tools==0.54.0 ; python_version >= "3.9" and python_full_version < "4.0.0" \
     --hash=sha256:5040a91282be9d1c9d379b0c65da50bcb3691bff03cee54fd4123ace238c3a43 \
     --hash=sha256:a7b7bfa5b9c5a81966454d17dffb2403cee25a806c858ee0486a08798227598f
@@ -72,9 +66,6 @@ pyparsing==3.0.9 ; python_version >= "3.9" and python_full_version < "4.0.0" \
 python-stdnum==1.17 ; python_version >= "3.9" and python_full_version < "4.0.0" \
     --hash=sha256:374e2b5e13912ccdbf50b0b23fca2c3e0531174805c32d74e145f37756328340 \
     --hash=sha256:a46e6cf9652807314d369b654b255c86a59f93d18be2834f3d567ed1a346c547
-redis==4.3.4 ; python_version >= "3.9" and python_full_version < "4.0.0" \
-    --hash=sha256:a52d5694c9eb4292770084fa8c863f79367ca19884b329ab574d5cb2036b3e54 \
-    --hash=sha256:ddf27071df4adf3821c4f2ca59d67525c3a82e5f268bed97b813cb4fabf87880
 setuptools==65.4.1 ; python_version >= "3.9" and python_full_version < "4.0.0" \
     --hash=sha256:1b6bdc6161661409c5f21508763dc63ab20a9ac2f8ba20029aaaa7fdb9118012 \
     --hash=sha256:3050e338e5871e70c72983072fe34f6032ae1cdeeeb67338199c2f74e083a80e
@@ -159,3 +150,4 @@ umap-project==1.2.4 ; python_version >= "3.9" and python_full_version < "4.0.0" 
     --hash=sha256:b05eac31dc47b655df9c627239439806bef5cd97a3d1e72151f17efb7cbfa53a
 django-agnocomplete==2.2.0 ; python_version >= "3.9" and python_full_version < "4.0.0" \
     --hash=sha256:c3b8338b1a6c8050f24a09507c590c062910c24cb719bd9a689b193f6caee97c
+requests==2.30.0 ; python_version >= "3.9" and python_full_version < "4.0.0"
