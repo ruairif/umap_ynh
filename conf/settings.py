@@ -129,14 +129,7 @@ SECRET_KEY = __get_or_create_secret(FINALPATH / 'secret.txt')  # /opt/yunohost/$
 INSTALLED_APPS += [
     'axes',  # https://github.com/jazzband/django-axes
     'django_yunohost_integration.apps.YunohostIntegrationConfig',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.sites',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'django.contrib.admin',
     'django.contrib.gis',
-
     'umap',
     'compressor',
     'social_django',
