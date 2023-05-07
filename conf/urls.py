@@ -168,7 +168,7 @@ if settings.PATH_URL:
     # Prefix all urls with "PATH_URL":
     urlpatterns = [
         path('', RedirectView.as_view(url=f'{settings.PATH_URL}/')),
-        path(f'{settings.PATH_URL}/', urlpatterns),
+        path(f'{settings.PATH_URL}/', include(urlpatterns)),
     ]
 else:
     # Installed to domain root, without a path prefix
