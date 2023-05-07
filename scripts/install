@@ -155,8 +155,7 @@ touch "$final_path/local_settings.py"
 # Activate PostGIS extension
 #=================================================
 
-ynh_psql_connect_as 'umap' "$db_pwd" <<< "CREATE EXTENSION postgis;"
-
+ynh_psql_execute_as_root -s "CREATE EXTENSION postgis;"
 #=================================================
 # MIGRATE / COLLECTSTATIC / CREATEADMIN
 #=================================================
