@@ -157,3 +157,4 @@ wrapt==1.14.1 ; python_version >= "3.9" and python_full_version < "4.0.0" \
     --hash=sha256:ef3f72c9666bba2bab70d2a8b79f2c6d2c1a42a7f7e2b0ec83bb2f9e383950af
 umap-project==1.2.4 ; python_version >= "3.9" and python_full_version < "4.0.0" \
     --hash=sha256:b05eac31dc47b655df9c627239439806bef5cd97a3d1e72151f17efb7cbfa53a
+django-agnocomplete==2.2.0 ; python_version >= "3.9" and python_full_version < "4.0.0"
