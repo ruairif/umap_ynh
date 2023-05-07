@@ -1,3 +1,4 @@
+import os
 from pathlib import Path as __Path
 
 from django_yunohost_integration.base_settings import *  # noqa:F401,F403
