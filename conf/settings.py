@@ -148,7 +148,7 @@ LOGIN_REDIRECT_URL = None
 LOGIN_URL = '/yunohost/sso/'
 LOGOUT_REDIRECT_URL = '/yunohost/sso/'
 # /yunohost/sso/?action=logout
-# ENABLE_ACCOUNT_LOGIN = False
+ENABLE_ACCOUNT_LOGIN = False
 
 ROOT_URLCONF = 'urls'
 WSGI_APPLICATION = 'umap.wsgi.application'
