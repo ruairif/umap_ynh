@@ -1,6 +1,7 @@
 import os
 from pathlib import Path as __Path
 
+from django_yunohost_integration.base_settings import *  # noqa:F401,F403
 from django_yunohost_integration.secret_key import get_or_create_secret as __get_or_create_secret
 
 from django.template.defaultfilters import slugify
@@ -123,7 +124,6 @@ YNH_SETUP_USER = 'setup_user.setup_project_user'
 SECRET_KEY = __get_or_create_secret(FINALPATH / 'secret.txt')  # /opt/yunohost/$app/secret.txt
 
 INSTALLED_APPS += [
-    'django_yunohost_integration.apps.YunohostIntegrationConfig',
     'django.contrib.gis',
     'umap',
     # See https://github.com/peopledoc/django-agnocomplete/commit/26eda2dfa4a2f8a805ca2ea19a0c504b9d773a1c
@@ -132,14 +132,6 @@ INSTALLED_APPS += [
     'agnocomplete.app.AgnocompleteConfig',
 ]
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
-
-MIDDLEWARE.insert(
-    MIDDLEWARE.index('django.contrib.auth.middleware.AuthenticationMiddleware') + 1,
-    # login a user via HTTP_REMOTE_USER header from SSOwat:
-    'django_yunohost_integration.sso_auth.auth_middleware.SSOwatRemoteUserMiddleware',
-)
-# AxesMiddleware should be the last middleware:
-MIDDLEWARE.append('axes.middleware.AxesMiddleware')
 
 # Keep ModelBackend around for per-user permissions and superuser
 AUTHENTICATION_BACKENDS = (
