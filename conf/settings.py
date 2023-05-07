@@ -108,8 +108,8 @@ YNH_CURRENT_HOST = '__YNH_CURRENT_HOST__'  # YunoHost main domain from: /etc/yun
 # -----------------------------------------------------------------------------
 # config_panel.toml settings:
 
-DEBUG_ENABLED = '__DEBUG_ENABLED__'
-DEBUG = bool(int(DEBUG_ENABLED))
+DEBUG_ENABLED = True # '__DEBUG_ENABLED__'
+DEBUG = True # bool(int(DEBUG_ENABLED))
 
 LOG_LEVEL = '__LOG_LEVEL__'
 ADMIN_EMAIL = '__ADMIN_EMAIL__'
