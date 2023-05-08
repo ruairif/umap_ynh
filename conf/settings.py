@@ -40,7 +40,7 @@ LANG_INFO.update({
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 TIME_ZONE = 'UTC'
 USE_TZ = True
-USE_I18N = True
+USE_I18N = False
 LANGUAGE_CODE = 'en'
 LANGUAGES = (
     ('am-et', 'Amharic'),
