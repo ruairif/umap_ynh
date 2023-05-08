@@ -5,6 +5,7 @@
 #=================================================
 
 domain=$YNH_APP_ARG_DOMAIN
+path="/"
 
 admin=$YNH_APP_ARG_ADMIN
 is_public=$YNH_APP_ARG_IS_PUBLIC
