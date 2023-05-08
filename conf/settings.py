@@ -172,8 +172,7 @@ UMAP_USE_UNACCENT = False
 UMAP_FEEDBACK_LINK = "https://wiki.openstreetmap.org/wiki/UMap#Feedback_and_help"  # noqa
 USER_MAPS_URL = 'user_maps'
 UMAP_READONLY = False
-UMAP_GZIP = True
-UMAP_XSENDFILE_HEADER = 'X-Accel-Redirect'
+UMAP_GZIP = False
 LOCALE_PATHS = [os.path.join(FINALPATH, 'locale')]
 
 ADMINS = (('__ADMIN__', ADMIN_EMAIL),)
@@ -270,9 +269,6 @@ TEMPLATES = [
         }
     },
 ]
-
-COMPRESS_ENABLED = True
-COMPRESS_OFFLINE = True
 
 try:
     from local_settings import *  # noqa:F401,F403
