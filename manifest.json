@@ -7,13 +7,13 @@
 		"fr": "Logiciel libre de cartographie"
 	},
 	"version": "0.1.0",
-	"url": "https://github.com/ruairif/umap_ynh",
+	"url": "https://umap.openstreetmap.fr/en/",
     "upstream": {
         "license": "AGPLv3",
-        "website": "https://github.com/ruairif/umap_ynh",
-        "admindoc": "https://github.com/ruairif/umap_ynh",
-        "userdoc": "https://github.com/ruairif/umap_ynh",
-        "code": "https://github.com/ruairif/umap_ynh"
+        "website": "https://umap.openstreetmap.fr/en/",
+        "admindoc": "https://umap-project.readthedocs.io/en/latest/",
+        "userdoc": "https://wiki.openstreetmap.org/wiki/UMap",
+        "code": "https://github.com/umap-project/umap"
     },
 	"license": "AGPLv3",
 	"previous_maintainers": [],
@@ -30,12 +30,6 @@
 				"name": "domain",
 				"type": "domain",
 				"full_domain": true
-			},
-			{
-				"name": "path",
-				"type": "path",
-				"example": "/umap",
-				"default": "/umap"
 			},
 			{
 				"name": "language",
