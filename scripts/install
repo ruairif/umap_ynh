@@ -145,7 +145,6 @@ chmod +x "$final_path/manage.py"
 
 ynh_add_config --template="settings.py" --destination="$final_path/settings.py"
 ynh_add_config --template="setup_user.py" --destination="$final_path/setup_user.py"
-ynh_add_config --template="urls.py" --destination="$final_path/urls.py"
 ynh_add_config --template="wsgi.py" --destination="$final_path/wsgi.py"
 
 touch "$final_path/local_settings.py"
