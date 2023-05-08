@@ -94,7 +94,7 @@ ynh_script_progression --message="Configuring nginx web server..."
 # Create a dedicated nginx config
 # https://yunohost.org/en/contribute/packaging_apps/helpers
 # https://github.com/YunoHost/yunohost/blob/dev/helpers/nginx
-ynh_add_nginx_config "public_path" "port"
+ynh_add_nginx_config
 
 #=================================================
 # CREATE DEDICATED USER
