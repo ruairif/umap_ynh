@@ -26,7 +26,7 @@ test ! -e "$public_path" || ynh_die --message="This path already contains a fold
 test ! -e "$final_path" || ynh_die --message="This path already contains a folder"
 
 # Register (book) web path
-ynh_webpath_register --app="$app" --domain="$domain" --path_url="$path_url"
+ynh_webpath_register --app="$app" --domain="$domain"
 
 mkdir -p "$public_path/media" "$public_path/static"
 mkdir -p "$final_path"
@@ -45,7 +45,6 @@ ynh_app_setting_set --app="$app" --key=final_path --value="$final_path"
 ynh_app_setting_set --app="$app" --key=log_path --value="$log_file"
 
 ynh_app_setting_set --app="$app" --key=domain --value="$domain"
-ynh_app_setting_set --app="$app" --key=path --value="$path_url"
 
 # Find a free port
 port=$(ynh_find_port --port=8000)

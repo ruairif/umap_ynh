@@ -27,7 +27,6 @@ db_user=$db_name
 db_pwd=$(ynh_app_setting_get --app="$app" --key=psqlpwd)
 
 domain=$(ynh_app_setting_get --app="$app" --key=domain)
-path_url=$(ynh_app_setting_get --app="$app" --key=path)
 
 #=================================================
 # CHECK IF THE APP CAN BE RESTORED

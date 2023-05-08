@@ -12,9 +12,8 @@ from django_example import __version__
 
 class ExampleProjectTestCase(HtmlAssertionMixin, TestCase):
     def test_urls(self):
-        assert settings.PATH_URL == 'app_path'
-        assert reverse('admin:index') == '/app_path/admin/'
-        assert reverse('debug-view') == '/app_path/'
+        assert reverse('admin:index') == '/admin/'
+        assert reverse('debug-view') == '/'
 
         ###############################################################################
         # Test as anonymous user

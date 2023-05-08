@@ -18,7 +18,6 @@ class DjangoYnhTestCase(HtmlAssertionMixin, TestCase):
         self.client = self.client_class()
 
     def test_settings(self):
-        assert settings.PATH_URL == 'app_path'
 
         assert str(settings.FINALPATH).endswith('/local_test/opt_yunohost')
         assert str(settings.PUBLIC_PATH).endswith('/local_test/var_www')
@@ -34,7 +33,6 @@ class DjangoYnhTestCase(HtmlAssertionMixin, TestCase):
         assert settings.DEFAULT_FROM_EMAIL == 'django_app@test.tld'
 
     def test_auth(self):
-        assert settings.PATH_URL == 'app_path'
         assert reverse('admin:index') == '/app_path/admin/'
 
         # SecurityMiddleware should redirects all non-HTTPS requests to HTTPS:
